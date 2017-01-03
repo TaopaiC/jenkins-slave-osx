@@ -80,7 +80,7 @@ fi
 
 if [ "${COMMAND}" != "lock" ] ; then
 	security unlock-keychain -p ${OSX_KEYCHAIN_PASS} ${OSX_KEYCHAIN}
-	security set-key-partition-list -S apple-tool:,apple: -s -k ${OSX_KEYCHAIN_PASS} ${OSX_KEYCHAIN}
+	security set-key-partition-list -S apple-tool:,apple: -s -k ${OSX_KEYCHAIN_PASS} ${OSX_KEYCHAIN} > /dev/null
 fi
 case $COMMAND in
 	set-password)
