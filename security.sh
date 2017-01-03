@@ -69,7 +69,7 @@ if [[ -z $COMMAND || -z $OSX_KEYCHAIN || -z $OSX_KEYCHAIN_PASS ]]; then
 	exit 2
 fi
 
-if [ ! -f ~/Library/Keychains/${OSX_KEYCHAIN} ]; then
+if [ ! -f ~/Library/Keychains/${OSX_KEYCHAIN}-db ]; then
 	exit 1
 fi
 
